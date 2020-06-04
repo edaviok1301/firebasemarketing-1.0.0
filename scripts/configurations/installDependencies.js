@@ -7,8 +7,12 @@ module.exports = function (context) {
   
   if (cordovaAbove8) {
     console.log("is Cordona 8");
+    try{
     child_process = require('child_process');
     deferral = require('q').defer();
+    }cacth(e){
+      console.log(e);
+    }
   } else {
     console.log("isn't Cordona 8");
     child_process = context.requireCordovaModule('child_process');

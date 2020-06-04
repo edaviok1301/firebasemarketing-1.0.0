@@ -6,9 +6,11 @@ module.exports = function (context) {
   var deferral;
   
   if (cordovaAbove8) {
+    console.log("is Cordona 8");
     child_process = require('child_process');
     deferral = require('q').defer();
   } else {
+    console.log("isn't Cordona 8");
     child_process = context.requireCordovaModule('child_process');
     deferral = context.requireCordovaModule('q').defer();
   }

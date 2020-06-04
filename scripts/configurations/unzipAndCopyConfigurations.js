@@ -15,9 +15,13 @@ module.exports = function(context) {
   var cordovaAbove7 = utils.isCordovaAbove(context, 7);
   var defer;
   if (cordovaAbove8) {
+    console.log("is Cordona 8");
     defer = require('q').defer();
+    console.log("defer: "+defer);
   } else {
+    console.log("isn't Cordona 8");
     defer = context.requireCordovaModule("q").defer();
+    console.log("defer: "+defer);
   }
   
   var appId = utils.getAppId(context);
